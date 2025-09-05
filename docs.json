@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "JusuSpace",
   "colors": {
-    "primary": "#FFD60A",
+    "primary": "#003566",
     "light": "#003566",
-    "dark": "#001d3d"
+    "dark": "#FFD60A"
   },
   "favicon": "/favicon.svg",
   "navigation": {
