@@ -11,10 +11,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Jusu's Projects",
         "groups": [
           {
-            "group": "Customization",
+            "group": "✦",
             "pages": [
               "index"
             ]
@@ -25,7 +25,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Meet Jusu!",
+          "anchor": "Visit Jusu!",
           "href": "https://jusu.me",
           "icon": "comet"
         }
@@ -37,28 +37,14 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Contact",
+      "label": "Support",
       "href": "https://x.com/apurujusu"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
    ]
   },
   "footer": {
