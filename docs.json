@@ -7,34 +7,15 @@
     "light": "#fca311",
     "dark": "#14213d"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Jusu's Projects",
-        "groups": [
-          {
-            "group": "✦",
-            "pages": [
-              "index"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Visit Jusu!",
-          "href": "https://jusu.me",
-          "icon": "comet"
-        }
-      ]
-    }
+    "pages": [
+      "index"
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Dark.png",
+    "dark": "/logo/Light.png"
   },
   "navbar": {
     "primary": {
