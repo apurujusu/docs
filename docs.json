@@ -2,39 +2,31 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "JusuSpace",
+  "appearance": {
+    "default": "system"
+  },
   "colors": {
     "primary": "#14213d",
     "light": "#fca311",
     "dark": "#14213d"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Jusu's Projects",
-        "groups": [
-          {
-            "group": "✦",
-            "pages": [
-              "index"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Visit Jusu!",
-          "href": "https://jusu.me",
-          "icon": "comet"
-        }
-      ]
-    }
+    "pages": ["index",{
+      "group": "Editing",
+      "icon":"stars",
+      "pages": ["editing/edit"],
+      "tag": "TBA"
+    },{
+      "group": "Misc",
+      "pages": ["misc/app_rec"],
+      "icon": "stars",
+      "tag": "NEW"
+    }]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Dark.png",
+    "dark": "/logo/Light.png"
   },
   "navbar": {
     "primary": {
