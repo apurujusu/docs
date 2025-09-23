@@ -15,13 +15,12 @@
     "pages": ["index",{
       "group": "Editing",
       "icon":"stars",
-      "pages": ["editing/edit"],
-      "tag": "TBA"
+      "pages": ["editing/mmdtoblender"],
+      "tag": "NEW"
     },{
       "group": "Misc",
       "pages": ["misc/app_rec"],
-      "icon": "stars",
-      "tag": "NEW"
+      "icon": "stars"
     }]
   },
   "logo": {
