@@ -286,6 +286,89 @@ https://youtu.be/8zqkp742gQk
 
 ---
 
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Presets aren't saving / panel can't access files">
+    Wavy 3AM saves preset files to your Documents folder. After Effects blocks file system access by default — you need to enable it manually.
+
+    <Steps>
+      <Step title="Open After Effects Preferences">
+        - **Windows:** Edit → Preferences → Scripting & Expressions
+        - **macOS:** After Effects → Preferences → Scripting & Expressions
+      </Step>
+      <Step title="Enable file access">
+        Check **Allow Scripts to Write Files and Access Network**.
+      </Step>
+      <Step title="Restart After Effects">
+        Close and reopen After Effects for the change to take effect.
+      </Step>
+    </Steps>
+    <Warning>
+      Without this setting enabled, Wavy 3AM cannot read or write preset files. This is the most common cause of presets not appearing or saving.
+    </Warning>
+  </Accordion>
+  <Accordion title="Extension doesn't appear in Window → Extensions">
+    This usually means the extension wasn't installed in the right folder, or After Effects hasn't been restarted since installation.
+
+    - Confirm the `Wavy 3AM` folder is in the correct CEP extensions directory (see Installation)
+    - Make sure the folder contains `CSXS/manifest.xml` — if it's nested inside another folder, move it up one level
+    - Fully quit and reopen After Effects (not just close the panel)
+    - If it still doesn't appear, try the ZXP Installer method instead of manual installation
+  </Accordion>
+  <Accordion title="Extension loads but shows a blank or white panel">
+    This is a CEP rendering issue. Try the following in order:
+
+    1. Close the panel, then reopen it from **Window → Extensions → Wavy 3AM**
+    2. Clear the CEP cache:
+       - **Windows:** Delete `%AppData%\Adobe\CEP\extensions`
+       - **macOS:** Delete `~/Library/Application Support/Adobe/CEP/extensions`
+    3. Reinstall the extension and restart After Effects
+    4. If you're on Windows, make sure your graphics drivers are up to date — CEP panels render via Chromium Embedded Framework and can be affected by GPU driver issues
+  </Accordion>
+  <Accordion title="Unsigned extension won't load (after manual install)">
+    If the extension is installed but After Effects silently ignores it, you may need to enable unsigned extension support.
+
+    **Windows:**
+
+    1. Open Registry Editor (`regedit`)
+    2. Navigate to `HKEY_CURRENT_USER\Software\Adobe\CSXS.9`
+    3. Add a new String Value: name `PlayerDebugMode`, value `1`
+    4. Restart After Effects
+
+    **macOS:**
+
+    1. Open Terminal
+    2. Run: `defaults write com.adobe.CSXS.9 PlayerDebugMode 1`
+    3. Restart After Effects
+
+    <Note>
+      The key version (`CSXS.9`) matches After Effects CC 2019+. 
+    </Note>
+  </Accordion>
+  <Accordion title="Curve isn't applying to my property">
+    - Make sure you have a property **with at least 2 keyframes** selected in the timeline before clicking Apply
+    - Wavy 3AM works on the selected property row. Click directly on the property name in the timeline to select it
+    - Check that the property type is supported: numeric (1D/2D/3D), spatial, or color properties work. Effect checkboxes, dropdowns, and marker properties are not supported
+    - If applying to a shape path, make sure the path topology (number of vertices) hasn't changed between keyframes
+  </Accordion>
+  <Accordion title="Copy from AE isn't working">
+    - Select the **property row** in the timeline (click the property name), not just a keyframe diamond
+    - The property must have 2 or more keyframes for the curve to be readable
+    - Make sure **Allow Scripts to Write Files and Access Network** is enabled in preferences (see above)
+    - Expressions on the property can interfere, temporarily disable any expressions before copying
+  </Accordion>
+  <Accordion title="Panel is slow or lagging">
+    - If you have an **animated GIF** set as the background, this is expected, GIF playback is CPU-intensive inside a CEP panel. Switch to a static image or remove the background to restore performance
+    - On very large preset libraries, the panel may take a moment to load. Consider splitting presets into multiple groups to keep each group manageable
+    - Reduce **UI Scale** in settings if the panel feels sluggish on lower-end hardware
+  </Accordion>
+</AccordionGroup>
+
+---
+
 ## Credits
 
 | Role                         | Person                                       |
