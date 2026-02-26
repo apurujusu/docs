@@ -1,0 +1,280 @@
+---
+title: "Wavy 3AM"
+description: "A professional easing curve editor panel for Adobe After Effects. Draw, save, and apply custom Bezier easing curves — built for real production workflows."
+icon: "wave-sine"
+---
+
+After Effects' built-in graph editor is functional but slow. **Wavy 3AM** gives you a dedicated, always-open panel where you can draw easing curves with full Bezier control, save them as presets, and apply them to any property in one click.
+
+No scripting. No awkward graph editor gymnastics. Just draw and apply.
+
+---
+
+<Frame>
+  ![Image](/images/image-2.png)
+</Frame>
+
+## Features
+
+<CardGroup cols={2}>
+  <Card icon="pen-nib" title="Graph Editor">
+    Interactive Bezier canvas with draggable handles, box selection, snapping, zoom, pan, grid overlay, and 50-state undo/redo history.
+  </Card>
+  <Card icon="folder-open" title="Preset System">
+    Save curves as `.wavy` files, organize into groups, drag-and-drop reorder, import/export, auto-generated thumbnails, and one-click apply mode.
+  </Card>
+  <Card icon="link" title="After Effects Integration">
+    Works with all property types — 1D, 2D, 3D, Spatial, Color. Handles shape and mask path animations with topology matching and overshoot detection.
+  </Card>
+  <Card icon="sliders" title="Customization">
+    Custom colors, background images (including GIFs), vignette, UI scale, button height, handle size, dynamic icons, and fully rebindable hotkeys.
+  </Card>
+</CardGroup>
+
+### Graph Editor
+
+- Interactive Bezier curve canvas with draggable keyframe handles
+- `Ctrl+Click` to add or delete keyframes anywhere on the curve
+- `Shift+Drag` for box selection of multiple keyframes
+- `Alt+Click` to break or reset individual handles
+- Hold `Shift` for snapping behavior
+- Scroll wheel to zoom vertically — `Alt+Scroll` for horizontal zoom
+- Click-and-drag or middle-click to pan the canvas
+- Double-click empty area to reset the view
+- Grid overlay with adjustable opacity
+- Configurable handle size and curve thickness
+- Full undo/redo history (up to 50 states)
+
+### Preset System
+
+- Save any curve as a named preset in one click
+- Presets stored as `.wavy` files in your Documents folder
+- Auto-generated curve thumbnails with your accent color
+- Organize presets into named groups and categories
+- Drag-and-drop to reorder presets within a group
+- Import and export presets to share with others
+- "Click to Apply" mode for an instant one-click workflow
+- Lock individual presets to prevent accidental edits
+- Context menu with Apply, Copy, Save, and Reset actions (each toggleable)
+
+### After Effects Integration
+
+- Works with all numeric property types: 1D, 2D, 3D, 2D Spatial, 3D Spatial, Color
+- Copy curves from any AE property into the editor with one click
+- Handles shape/mask path animations with topology matching
+- Detects and manages overshoot conditions automatically
+- Applies temporal easing and influence values correctly
+- Smart error handling for invalid or incompatible properties
+
+### Customization
+
+- Curve color, accent color, and canvas background — all user-defined
+- Upload a custom background image (PNG, JPG, or animated GIF)
+- Background image opacity and fit mode controls
+- Optional vignette effect with adjustable intensity
+- UI scale from 0.5× to 1.5× (plus custom value input)
+- Adjustable button height (20–60px)
+- Toggle button gradients on or off
+- Dynamic icons that show active modifiers (Ctrl/Alt/Shift indicators)
+- Fully customizable keybindings
+
+### Compatibility
+
+- Adobe After Effects CC 2019 and later (v14.0+)
+- Windows and macOS
+- Responsive panel layout that adapts to any panel size
+
+---
+
+## Installation
+
+<Tabs>
+  <Tab title="ZXP Installer (Recommended)">
+    <Steps>
+      <Step title="Download ZXP Installer">
+        Get ZXP Installer from aescripts: https://aescripts.com/learn/post/zxp-installer
+      </Step>
+      <Step title="Install the extension">
+        Drag and drop the `.zxp` file into ZXP Installer.
+      </Step>
+      <Step title="Restart After Effects">
+        Fully close and reopen After Effects.
+      </Step>
+      <Step title="Open the panel">
+        Go to **Window → Extensions → Wavy 3AM**.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Manual">
+    <Steps>
+      <Step title="Download the extension">
+        Download and unzip the Wavy 3AM package.
+      </Step>
+      <Step title="Copy to extensions folder">
+        Copy the `Wavy 3AM` folder to your CEP extensions directory:
+
+        - **Windows:** `C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\`
+        - **macOS:** `/Library/Application Support/Adobe/CEP/extensions/`
+      </Step>
+      <Step title="Restart After Effects">
+        Fully close and reopen After Effects.
+      </Step>
+      <Step title="Open the panel">
+        Go to **Window → Extensions → Wavy 3AM**.
+      </Step>
+    </Steps>
+    <Note>
+      On newer versions of After Effects you may need to enable unsigned extensions via the Adobe debug flag in the registry (Windows) or plist (macOS).
+    </Note>
+  </Tab>
+</Tabs>
+
+---
+
+## Usage
+
+### How to Apply a Curve
+
+<Steps>
+  <Step title="Open the panel">
+    Go to **Window → Extensions → Wavy 3AM**.
+  </Step>
+  <Step title="Draw or adjust your curve">
+    Use the canvas to shape your easing curve with Bezier handles.
+  </Step>
+  <Step title="Select a property in After Effects">
+    Select a keyframed property or a keyframe range in the timeline.
+  </Step>
+  <Step title="Click Apply">
+    Click the **Apply** button — the curve is applied directly to the selected property.
+  </Step>
+</Steps>
+
+### How to Apply (Duplicate)
+
+<Steps>
+  <Step title="Draw or load your curve">
+    Shape your curve or click a saved preset.
+  </Step>
+  <Step title="Select a property in After Effects">
+    Select a keyframed property in the timeline.
+  </Step>
+  <Step title="Ctrl+Click Apply">
+    Hold **Ctrl** and click **Apply** — keyframes are duplicated, then the curve is applied to the duplicate.
+  </Step>
+</Steps>
+
+### How to Apply (Mirror)
+
+<Steps>
+  <Step title="Draw or load your curve">
+    Shape your curve or click a saved preset.
+  </Step>
+  <Step title="Select a property in After Effects">
+    Select a keyframed property in the timeline.
+  </Step>
+  <Step title="Alt+Click Apply">
+    Hold **Alt** and click **Apply** — the curve is flipped around its center before applying.
+  </Step>
+</Steps>
+
+### How to Apply (Relative)
+
+<Steps>
+  <Step title="Draw or load your curve">
+    Shape your curve or click a saved preset.
+  </Step>
+  <Step title="Select a property in After Effects">
+    Select a keyframed property in the timeline.
+  </Step>
+  <Step title="Ctrl+Alt+Click Apply">
+    Hold **Ctrl+Alt** and click **Apply** — the curve is applied relative to the current keyframe positions.
+  </Step>
+</Steps>
+
+### Saving a Preset
+
+<Steps>
+  <Step title="Dial in your curve">
+    Adjust the curve to your liking on the canvas.
+  </Step>
+  <Step title="Click Save">
+    Click the **Save** button, or right-click the canvas to open the context menu.
+  </Step>
+  <Step title="Name it and pick a group">
+    Enter a preset name and select or create a group.
+  </Step>
+  <Step title="Done">
+    The preset appears in your list instantly with an auto-generated thumbnail.
+  </Step>
+</Steps>
+
+### Copying a Curve from After Effects
+
+<Steps>
+  <Step title="Select a property in After Effects">
+    Click a property that already has keyframes in the timeline.
+  </Step>
+  <Step title="Click Copy in Wavy 3AM">
+    Click the **Copy** button in the panel.
+  </Step>
+  <Step title="Adjust and re-apply">
+    The curve loads into the editor — tweak it and apply back as needed.
+  </Step>
+</Steps>
+
+---
+
+## Settings Reference
+
+<AccordionGroup>
+  <Accordion title="Appearance">
+    | Setting           | Description                           |
+    | ----------------- | ------------------------------------- |
+    | Curve Color       | Color of the curve line on the canvas |
+    | Accent Color      | Color used for preset thumbnails      |
+    | Canvas Background | Background color of the graph editor  |
+  </Accordion>
+  <Accordion title="Background">
+    | Setting            | Description                              |
+    | ------------------ | ---------------------------------------- |
+    | Background Image   | Upload a PNG, JPG, or animated GIF       |
+    | Image Opacity      | Opacity of the background image (0–100%) |
+    | Vignette           | Toggle vignette overlay                  |
+    | Vignette Intensity | Strength of the vignette effect (0–100%) |
+  </Accordion>
+  <Accordion title="Interface">
+    | Setting         | Description                                         |
+    | --------------- | --------------------------------------------------- |
+    | UI Scale        | Scale the panel UI from 0.5× to 1.5×                |
+    | Button Height   | Height of preset buttons (20–60px)                  |
+    | Button Gradient | Toggle gradient style on preset buttons             |
+    | Dynamic Icons   | Show Ctrl/Alt/Shift modifier hints on apply buttons |
+    | Click to Apply  | Apply a preset on single click                      |
+  </Accordion>
+  <Accordion title="Canvas">
+    | Setting      | Description                                |
+    | ------------ | ------------------------------------------ |
+    | Handle Size  | Size of Bezier control handles (4–16px)    |
+    | Grid Opacity | Visibility of the background grid (0–100%) |
+  </Accordion>
+  <Accordion title="Keybindings">
+    All control bindings are fully customizable from the settings panel. Defaults: `Ctrl+Click` to add/delete keyframes, `Ctrl+Z` / `Ctrl+Shift+Z` for undo/redo.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Credits
+
+| Role                         | Person                                       |
+| ---------------------------- | -------------------------------------------- |
+| Main Development & App Logic | Adys — [@Kibo4a](https://x.com/Kibo4a)       |
+| UI/UX & Code Cleanup         | Jusu — [@apurujusu](https://x.com/apurujusu) |
+| Special Thanks               | Vermi MAD House                              |
+
+---
+
+## License
+
+All rights reserved. This extension is sold as a commercial product. Redistribution, reverse engineering, or resale of any kind is prohibited without written permission from the authors.

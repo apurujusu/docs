@@ -12,16 +12,18 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "pages": ["index",{
-      "group": "Editing",
-      "icon":"stars",
-      "pages": ["editing/mmdtoblender"],
-      "tag": "NEW"
-    },{
-      "group": "Misc",
-      "pages": ["misc/app_rec"],
-      "icon": "stars"
-    }]
+    "pages": [
+      "index",
+      {
+        "group": "Editing",
+        "icon": "stars",
+        "tag": "NEW",
+        "pages": [
+          "editing/mmdtoblender",
+          "wavy-3-am"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/Dark.png",
