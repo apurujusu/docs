@@ -18,8 +18,15 @@
         "group": "Editing",
         "icon": "stars",
         "pages": [
-          "editing/mmdtoblender",
-          "wavy-3-am"
+          "editing/mmdtoblender"
+        ]
+      },
+      {
+        "group": "Wavy",
+        "tag": "NEW",
+        "pages": [
+          "wavy-3-am",
+          "version-history"
         ]
       }
     ]
